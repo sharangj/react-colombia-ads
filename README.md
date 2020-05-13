@@ -15,15 +15,19 @@ npm install --save react-colombia-ads
 ```jsx
 import React, { Component } from 'react'
 
-import ColumbiaAd from 'react-colombia-ads'
+import { ColumbiaAd } from 'react-colombia-ads'
 import 'react-colombia-ads/dist/index.css'
 
 class Example extends Component {
   render() {
+    const colombiaAdStyle = {
+      minHeight: '2px',
+      width: '100%'
+    }
     return (
       <ColombiaAd
-        mobileSlotId='337070'
-        desktopSlotId='337057'
+        mobileSlotId='<mobile id>'
+        desktopSlotId='<desktop id>'
         style={colombiaAdStyle}
         section='ArticleShow'
       />

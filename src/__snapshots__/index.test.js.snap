@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ColombiaAd does render colombia script 1`] = `
+Array [
+  <div
+    className="displayMobile"
+  >
+    <div
+      className="colombia"
+      data-position="1"
+      data-section="ArticleShow"
+      data-slot="<mobile id>"
+      data-ua="M"
+      id="div-clmb-ctn-<mobile id>-1"
+      style={
+        Object {
+          "minHeight": "2px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>,
+  <div
+    className="displayDesktop"
+  >
+    <div
+      className="colombia"
+      data-position="2"
+      data-section="ArticleShow"
+      data-slot="<desktop id>"
+      data-ua="D"
+      id="div-clmb-ctn-<desktop id>-1"
+      style={
+        Object {
+          "minHeight": "2px",
+          "width": "100%",
+        }
+      }
+    />
+  </div>,
+]
+`;

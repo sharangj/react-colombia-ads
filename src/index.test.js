@@ -1,7 +1,22 @@
-import { ExampleComponent } from '.'
+import React from 'React'
+import renderer from 'react-test-renderer'
+import { ColombiaAd } from './index.js'
 
-describe('ExampleComponent', () => {
+describe('ColombiaAd', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(ColombiaAd).toBeTruthy()
+  })
+
+  it('does render colombia script', () => {
+    const tree = renderer
+      .create(
+        <ColombiaAd
+          mobileSlotId='<mobile id>'
+          desktopSlotId='<desktop id>'
+          section='ArticleShow'
+        />
+      )
+      .toJSON()
+    expect(tree).toMatchSnapshot()
   })
 })

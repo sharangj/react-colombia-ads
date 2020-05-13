@@ -2,9 +2,10 @@ import PT from 'prop-types'
 import React from 'react'
 import styles from './styles.module.css'
 
-export default class ColombiaAd extends React.Component {
+class ColombiaAd extends React.Component {
   componentDidMount() {
-    if (typeof colombia == 'undefined') {
+    /* eslint-disable no-use-before-define */
+    if (typeof colombia === 'undefined') {
       var colombia = colombia || {}
       colombia.fns = colombia.fns || []
       ;(function () {
@@ -13,7 +14,7 @@ export default class ColombiaAd extends React.Component {
         cads.type = 'text/javascript'
         cads.src = '//static.clmbtech.com/ctn/commons/js/colombia_v2.js'
         var node = document.getElementsByTagName('script')[0]
-        node.parentNode.insertBefore(cads, node)
+        node && node.parentNode.insertBefore(cads, node)
       })()
     }
   }
