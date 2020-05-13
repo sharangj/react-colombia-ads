@@ -1,9 +1,25 @@
 /* add css module styles here (optional) */
 
-.test {
-  margin: 2em;
-  padding: 0.5em;
-  border: 2px solid #000;
-  font-size: 2em;
-  text-align: center;
+.displayMobile {
+  display: block;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+
+.displayDesktop {
+  display: block;
+  overflow: auto;
+  margin-bottom: 16px;
+}
+
+@media only screen and (max-width: 768px) {
+  .displayDesktop {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .displayMobile {
+    display: none;
+  }
 }
