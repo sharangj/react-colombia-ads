@@ -26,28 +26,32 @@ class ColombiaAd extends React.Component {
     }
     return (
       <React.Fragment>
-        <div className={styles.displayMobile}>
-          <div
-            id={`div-clmb-ctn-${this.props.mobileSlotId}-1`}
-            style={this.props.style || colombiaAdStyle}
-            data-slot={this.props.mobileSlotId}
-            data-position={`${this.props.position || 1}`}
-            data-section={this.props.section}
-            data-ua='M'
-            className='colombia'
-          />
-        </div>
-        <div className={styles.displayDesktop}>
-          <div
-            id={`div-clmb-ctn-${this.props.desktopSlotId}-1`}
-            style={this.props.style || colombiaAdStyle}
-            data-slot={this.props.desktopSlotId}
-            data-position={`${this.props.position + 1 || 2}`}
-            data-section={this.props.section}
-            data-ua='D'
-            className='colombia'
-          />
-        </div>
+        {this.props.mobileSlotId && (
+          <div className={styles.displayMobile}>
+            <div
+              id={`div-clmb-ctn-${this.props.mobileSlotId}-1`}
+              style={this.props.style || colombiaAdStyle}
+              data-slot={this.props.mobileSlotId}
+              data-position={`${this.props.position || 1}`}
+              data-section={this.props.section}
+              data-ua='M'
+              className='colombia'
+            />
+          </div>
+        )}
+        {this.props.desktopSlotId && (
+          <div className={styles.displayDesktop}>
+            <div
+              id={`div-clmb-ctn-${this.props.desktopSlotId}-1`}
+              style={this.props.style || colombiaAdStyle}
+              data-slot={this.props.desktopSlotId}
+              data-position={`${this.props.position + 1 || 2}`}
+              data-section={this.props.section}
+              data-ua='D'
+              className='colombia'
+            />
+          </div>
+        )}
       </React.Fragment>
     )
   }

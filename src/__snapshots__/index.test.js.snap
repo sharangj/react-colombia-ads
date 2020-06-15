@@ -40,3 +40,45 @@ Array [
   </div>,
 ]
 `;
+
+exports[`ColombiaAd renders only desktop script for when mobile slot id is not passed 1`] = `
+<div
+  className="displayDesktop"
+>
+  <div
+    className="colombia"
+    data-position="2"
+    data-section="ArticleShow"
+    data-slot="<desktop id>"
+    data-ua="D"
+    id="div-clmb-ctn-<desktop id>-1"
+    style={
+      Object {
+        "minHeight": "2px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;
+
+exports[`ColombiaAd renders only mobile when desktop slot id is not passed 1`] = `
+<div
+  className="displayMobile"
+>
+  <div
+    className="colombia"
+    data-position="1"
+    data-section="ArticleShow"
+    data-slot="<mobile id>"
+    data-ua="M"
+    id="div-clmb-ctn-<mobile id>-1"
+    style={
+      Object {
+        "minHeight": "2px",
+        "width": "100%",
+      }
+    }
+  />
+</div>
+`;

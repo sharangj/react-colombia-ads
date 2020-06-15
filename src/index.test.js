@@ -19,4 +19,20 @@ describe('ColombiaAd', () => {
       .toJSON()
     expect(tree).toMatchSnapshot()
   })
+
+  it('renders only mobile when desktop slot id is not passed', () => {
+    const tree = renderer
+      .create(<ColombiaAd mobileSlotId='<mobile id>' section='ArticleShow' />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(tree.props.className).toBe('displayMobile')
+  })
+
+  it('renders only desktop script for when mobile slot id is not passed', () => {
+    const tree = renderer
+      .create(<ColombiaAd desktopSlotId='<desktop id>' section='ArticleShow' />)
+      .toJSON()
+    expect(tree).toMatchSnapshot()
+    expect(tree.props.className).toBe('displayDesktop')
+  })
 })
